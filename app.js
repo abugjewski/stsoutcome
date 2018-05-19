@@ -1,18 +1,12 @@
 const singleData = document.querySelectorAll(".single-data input")
 const incomeSum = document.querySelector(".result-number")
 const incomeDiff = document.querySelector(".difference-number")
+const confirmButton = document.querySelector(".confirm-data")
 
 let sum, diff = 0.0;
-for(let i = 0; i < singleData.length; i++){
-    singleData[i].value = 0
-}
 
-for(let i = 0; i < singleData.length; i++){
-    singleData[i].addEventListener("input", function(){
-        if (!singleData[i].value){
-            singleData[i].value = 0
-        }
-        sum = parseFloat(singleData[0].value) +
+confirmButton.addEventListener("click", function(){
+    sum = parseFloat(singleData[0].value) +
         parseFloat(singleData[2].value * 500) +
         parseFloat(singleData[3].value * 200) +
         parseFloat(singleData[4].value * 100) +
@@ -28,13 +22,12 @@ for(let i = 0; i < singleData.length; i++){
         parseFloat(singleData[14].value * 0.05) +
         parseFloat(singleData[15].value * 0.02) +
         parseFloat(singleData[16].value * 0.01)
-        diff = sum - parseFloat(singleData[1].value)
-        incomeSum.innerText = sum + " zł"
-        incomeDiff.innerText = diff + " zł"
-        if (diff > 0) {
-            incomeDiff.style.color = "var(--correct-color)"
-        } else {
-            incomeDiff.style.color = "var(--alert-color)"
-        }
-    })
-}
+    diff = sum - parseFloat(singleData[1].value)
+    incomeSum.innerText = sum + " zł"
+    incomeDiff.innerText = diff + " zł"
+    if (diff > 0) {
+        incomeDiff.style.color = "var(--correct-color)"
+    } else {
+        incomeDiff.style.color = "var(--alert-color)"
+    }
+})
