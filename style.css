@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700&subset=latin-ext');
+
+:root {
+    --bg-color: #F8BBD0;
+    --main-color-light: #F094B3;
+    --scd-color-light: #EA86A8;
+    --main-color-dark: #E46D95;
+    --main-color-black: #111111;
+    --scd-color-black: #333333;
+    --correct-color: #8BC34A;
+    --alert-color: #F44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    font-size: 100%;
+    box-sizing: border-box;
+    color: var(--main-color-black);
+    font-family: 'Nunito', "Arial", sans-serif;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+input {
+    width: 150px;
+    margin-left: 1rem;
+    height: 2rem;
+    color: var(--scd-color-black);
+    font-size: 1.5rem;
+    background-color: var(--main-color-light);
+    border: 1px solid var(--scd-color-light);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.income-data {
+    display: flex;
+}
+
+.data-column {
+    width: 50%;
+}
+
+.single-data {
+    margin: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.results-section {
+    justify-content: center;
+}
+
+.result {
+    width: 100%;
+    color: var(--main-color-dark);
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.result-number {
+    color: var(--scd-color-black);
+}
+
+.difference {
+    font-size: 2rem;
+    color: var(--main-color-dark);
+}
+
+@media only screen and (min-width: 1280px){
+    body {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    section {
+        width: 50%;
+    }
+}
