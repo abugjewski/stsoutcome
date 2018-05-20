@@ -68,6 +68,7 @@ section {
 .single-data {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     margin-bottom: 2rem;
 }
@@ -118,6 +119,10 @@ section {
 
     .additional-data input {
         width: 100%;
+    }
+
+    .single-data {
+        flex-direction: row;
     }
 
     .income-data{
